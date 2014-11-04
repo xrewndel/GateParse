@@ -10,4 +10,11 @@ log4j.appender.CSVAppender.File=${log}/gate_parse-${current.date}.csv
 log4j.appender.CSVAppender.layout=org.apache.log4j.PatternLayout
 log4j.appender.CSVAppender.layout.ConversionPattern=%m%n
 
+# MainFileAppender
+log4j.appender.MainFileAppender=org.apache.log4j.FileAppender
+log4j.appender.MainFileAppender.File=${log}/gateparse-${current.date}.log
+log4j.appender.MainFileAppender.layout=org.apache.log4j.PatternLayout
+log4j.appender.MainFileAppender.layout.ConversionPattern=%m%n
+
+log4j.logger.main=DEBUG,MainFileAppender
 log4j.logger.csv=DEBUG,CSVAppender
